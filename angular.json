@@ -95,10 +95,18 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/chart.js/dist/Chart.min.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ec291a81-a305-46b9-bfa6-6402907df50f"
   }
+ 
+  
+
 }

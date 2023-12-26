@@ -1,0 +1,128 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "employee",
+      "password": "employee123",
+      "role": "employee"
+    },
+    {
+      "id": 2,
+      "username": "hr",
+      "password": "hr123",
+      "role": "hr"
+    }
+  ],
+  "employees": [
+    {
+      "firstname": "Anupama",
+      "lastname": "Anil",
+      "age": 25,
+      "birthdate": "1995-05-05",
+      "gender": "f",
+      "image": "Ellipse 2351.png",
+      "bloodgroup": "O+ve",
+      "email": "anupama@gmail.com",
+      "mobile": "99663322552",
+      "id": 1
+    },
+    {
+      "firstname": " Jhon",
+      "lastname": " Kurian",
+      "age": 25,
+      "birthdate": "1995-05-05",
+      "gender": "m",
+      "image": "",
+      "bloodgroup": "A+",
+      "email": "jhonkurian@gmail.com",
+      "mobile": "8855669933",
+      "id": 2
+    },
+    {
+      "firstname": "Jane",
+      "lastname": " Doe",
+      "age": 28,
+      "birthdate": "1992-02-05",
+      "gender": "f",
+      "image": "",
+      "bloodgroup": "O+",
+      "email": "janedoe@gmail.com",
+      "mobile": "8855221144",
+      "id": 3
+    },
+    {
+      "firstname": "Jane",
+      "lastname": " Doe",
+      "age": 28,
+      "birthdate": "1992-02-05",
+      "gender": "f",
+      "image": "",
+      "bloodgroup": "O+",
+      "email": "janedoe@gmail.com",
+      "mobile": "8855221144",
+      "id": 4
+    },
+    {
+      "firstname": " Arjun",
+      "lastname": " Anil",
+      "age": 30,
+      "birthdate": "1990-02-05",
+      "gender": "f",
+      "image": "",
+      "bloodgroup": "A-",
+      "email": "arjunanil@gmail.com",
+      "mobile": "8855221144",
+      "id": 5
+    },
+    {
+      "firstname": " Anjana",
+      "lastname": " Das",
+      "age": 29,
+      "birthdate": "1990-02-06",
+      "gender": "f",
+      "image": "",
+      "bloodgroup": "A+",
+      "email": "anjana@gmail.com",
+      "mobile": "9966554477",
+      "id": 6
+    }
+  ],
+  "leaveApplication": [
+    {
+      "name": "Anil",
+      "type": "Vacation",
+      "startDate": "2023-10-05",
+      "endDate": "2023-10-10",
+      "reason": "etrdfghjkn",
+      "status": "Approved",
+      "id": 3
+    },
+    {
+      "name": "john",
+      "type": "Sick",
+      "startDate": "2023-02-02",
+      "endDate": "2023-02-07",
+      "reason": "Medical checkup",
+      "status": "Pending",
+      "id": 4
+    },
+    {
+      "name": "anu",
+      "type": "Vacation",
+      "startDate": "2023-02-08",
+      "endDate": "2023-02-16",
+      "reason": "Family vacation",
+      "status": "Pending",
+      "id": 5
+    },
+    {
+      "name": "anu",
+      "type": "Vacation",
+      "startDate": "2023-02-08",
+      "endDate": "2023-02-16",
+      "reason": "Family vacation",
+      "status": "Pending",
+      "id": 6
+    }
+  ]
+}

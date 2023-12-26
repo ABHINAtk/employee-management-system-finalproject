@@ -1,0 +1,89 @@
+
+
+  
+<div class="container-fluid g-0 p-2" *ngFor="let employee of employeeData"> 
+
+  <div class="row g-0">
+
+      <div class="col-md-2 d-flex justify-content-center align-items-center">
+          <img src="../../assets/images/{{employee.image}}" alt="Profile Image" class="profile">
+      </div>
+
+      <div class="col ps-2">
+
+          <div class="row g-0">
+            <div class="col-md-10 ">
+                <span class="name">{{employee.id}} </span>
+            </div>
+
+              <div class="col-md-10 text-center">
+                  <span class="name">{{employee.firstname | titlecase}} {{employee.lastname | titlecase}}</span>
+              </div>
+              <div class="col-md-2 d-flex justify-content-center align-items-center">
+                <div class="btn-group" role="group">
+                <button type="button" class="btn btn-outline-success"
+                      routerLink="/edit/:{{employee.id}}">Edit</button>
+                  <button type="button" class="btn btn-outline-danger"
+                      (click)="removeEmployee(employee.id)">Delete</button>
+              </div>
+
+              </div>
+
+          </div>
+
+          <div class="row g-0 mt-3">
+
+              <div class="col-md">
+
+                  <table class="table table-hover mx-auto">
+              
+                      <tbody>
+                          <tr>
+                              <td>age</td> 
+                              <td>{{employee.age}}</td>
+                          </tr>
+                          <tr>
+                              <td>Birthdate</td>
+                              <td>{{employee.birthdate}}</td>
+                          </tr>
+                          <tr>
+                              <td>Gender</td>
+                              <td>{{employee.gender == 'm' ? "Male" : "Female"}}</td>
+                          </tr>
+                         
+                      </tbody>
+                  </table>
+
+              </div>
+
+              <div class="col">
+
+                  <table class="table table-hover mx-auto">
+                    
+                      <tbody>
+                          <tr>
+                              <td>bloodgroup</td>
+                              <td>{{employee.bloodgroup | titlecase}}</td>
+                          </tr>
+                          <tr>
+                              <td>email</td>
+                              <td>{{employee.email}}</td>
+                          </tr>
+                          <tr>
+                              <td>mobile</td>
+                              <td>{{employee.mobile}}</td>
+                          </tr>
+                      </tbody>
+                  </table>
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</div>
+<router-outlet></router-outlet>
+

@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .login-container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 360px;
+      height: 410px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .form-group button {
+      background-color: #4b99b6;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      width:320px;
+    }
+
+    .form-group button:hover {
+      background-color: #57a5bd;
+    }
+   
+  </style>
+</head>
+<body>  
+
+  <div class="login-container">
+    <h2 class="p-3">LOGIN</h2>
+    <form class="login-form">
+      <div class="form-group mb-3">
+        <label for="username">Username:</label>
+        <input type="text" id="username" [(ngModel)]="username" name="username" required>
+      </div>
+
+      <div class="form-group mb-5">
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required>
+      </div>
+
+      <div class="form-group">
+        <button type="button" (click)="login()">Login</button>
+      </div>
+
+      <div *ngIf="loginSuccess" class="success-message">
+        Login successful! Welcome, {{ username }}!
+      </div>
+    
+    </form>
+  </div>
+
+</body>
+</html>
+
+
+
+  
+  

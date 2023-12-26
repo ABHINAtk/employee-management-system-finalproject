@@ -1,0 +1,92 @@
+
+<button routerLink="create-employee"  class="btn btn-primary round-0 ms-3 mt-3 fs-5 color-black">create employee</button><br>
+
+<style>
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .doughnutChart{
+    width: 50%;
+  }
+  .barchart{
+    width: 50%;
+  }
+
+</style>
+
+
+<button routerLink="employee-list"  class="btn btn-primary round-0 ms-3 fs-5 color black mt-3">employee Details</button><br>
+
+<router-outlet></router-outlet>
+
+<div class="container">
+  
+  
+  <div class="doughnutChart">
+    <canvas id="doughnutChart" width="180" height="200"></canvas>
+  </div>
+  
+  
+  <div class="barChart">
+    <canvas id="barChart" width="190" height="200"></canvas>
+  </div>
+</div>
+
+
+
+<div class="container mt-5"> 
+  <div class="row justify-content-center">
+
+    <div class="col-md-10"> 
+      <table class="table table-bordered table-hover table-responsive-md">
+        <thead class="table-primary">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Type of Leave</th> 
+            <th scope="col">Start Date</th>    
+            <th scope="col">End Date</th>     
+            <th scope="col">Reason</th>        
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let application of leaveApplications">
+            <td>{{ application.id }}</td>
+            <td>{{ application.name }}</td>
+            <td>{{ application.email }}</td>
+            <td>{{ application.type }}</td>         
+            <td>{{ application.startDate }}</td>    
+            <td>{{ application.endDate }}</td>      
+            <td>{{ application.reason }}</td>       
+            <td>{{ application.status }}</td>
+            <td>
+              <button (click)="approveLeave(application.id)" *ngIf="application.status === 'Pending'" class="btn btn-success btn-sm">Approve</button>
+              <button (click)="rejectLeave(application.id)" *ngIf="application.status === 'Pending'" class="btn btn-danger btn-sm">Reject</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

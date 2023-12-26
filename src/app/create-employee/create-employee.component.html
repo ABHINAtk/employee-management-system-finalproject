@@ -1,0 +1,78 @@
+<style>
+
+    .custom-bg {
+      background-color: #efebeb; 
+      padding: 20px; 
+      border-radius: 8px; 
+    }
+  </style>
+  
+  <div class="container mt-5"> 
+    <div class="custom-bg">
+<form [formGroup]="addEmployee" (ngSubmit)="saveData()" class="mt-5"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="firstname" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstname" placeholder="First Name" formControlName="firstname">
+            </div>
+            <div class="col-md-6">
+                <label for="lastname" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastname" placeholder="Last Name" formControlName="lastname">
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <label for="age" class="form-label">Age</label>
+                <input type="number" class="form-control" id="age" formControlName="age">
+            </div>
+            <div class="col-md-6">
+                <label for="datepicker" class="form-label">Birthdate</label>
+                <input type="date" class="form-control" id="datepicker" formControlName="birthdate">
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <h6 class="text-secondary">Gender</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="m" formControlName="gender">
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="f" formControlName="gender">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="image" class="form-label">Profile Image</label>
+                <input type="file" class="form-control" id="image" #fileInput>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <label for="bloodgroup" class="form-label">Blood Group</label>
+                <input type="text" class="form-control" id="bloodgroup" formControlName="bloodgroup">
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email">
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <label for="mobile" class="form-label">Mobile</label>
+                <input type="text" class="form-control" id="mobile" formControlName="mobile">
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>
