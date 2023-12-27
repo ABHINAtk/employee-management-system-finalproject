@@ -66,7 +66,7 @@ rejectLeave(id: number): void {
       data: {
         labels: ['Active', 'Inactive'],
         datasets: [{
-          data: [75, 25], // Sample data (replace with actual data)
+          data: [75, 25], 
           backgroundColor: ['green', 'red']
         }]
       },
@@ -81,10 +81,10 @@ rejectLeave(id: number): void {
     this.barChart = new Chart('barChart', {
       type: 'bar',
       data: {
-        labels: ['Employee 1', 'Employee 2', 'Employee 3'], // Sample labels
+        labels: ['Employee 1', 'Employee 2', 'Employee 3'], 
         datasets: [{
           label: 'Leaves Taken',
-          data: [5, 3, 7], // Sample data (replace with actual data)
+          data: [5, 3, 7], 
           backgroundColor: 'blue'
         }]
       },
