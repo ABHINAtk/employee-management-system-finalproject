@@ -13,12 +13,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 
 const routes: Routes = [
+  {path:'edit/:id',component:EditEmployeeComponent},
   { path: 'login', component: LoginComponent },
   { path: 'hr-dashboard', component: HrDashboardComponent, canActivate: [AuthGuard], data: { expectedRole: 'hr' },
   children: [
     { path: 'create-employee', component: CreateEmployeeComponent },
     { path: 'employee-list', component: EmployeeeListComponent },
-      {path:'edit/:id',component:EditEmployeeComponent}
+
   ] },
   { path: 'employee-dashboard', component: EmployeeDashboardComponent, canActivate: [AuthGuard], data: { expectedRole: 'employee' },
   children: [
